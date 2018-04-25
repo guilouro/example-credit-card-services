@@ -1,9 +1,9 @@
 CREATE TABLE `creditcards` (
   `id` int(11) NOT NULL,
-  `number` int(11) NOT NULL,
-  `cvv` int(4) NOT NULL,
+  `number` varchar(256) NOT NULL,
+  `cvv` varchar(256) NOT NULL,
   `expiration` date NOT NULL,
-  `company` varchar(50) NOT NULL
+  `company` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ALTER TABLE `creditcards`
