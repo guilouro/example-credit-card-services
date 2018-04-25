@@ -23,6 +23,7 @@
   "dependencies": {
     "hapi": "^16.6.3",
     "hapi-router": "^3.5.0",
+    "mysql": "^2.15.0",
     "nodemon": "^1.17.3"
   },
   "devDependencies": {

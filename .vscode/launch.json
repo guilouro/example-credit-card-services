@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch node",
             "runtimeVersion": "8.11.1",
-            "program": "${workspaceFolder}/server/app.js"
+            "program": "${workspaceFolder}/server/src/app.js"
         }
     ]
 }
