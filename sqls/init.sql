@@ -12,3 +12,7 @@ ALTER TABLE `creditcards`
 ALTER TABLE `creditcards`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
+
+-- Temp example
+INSERT INTO `creditcards` (`id`, `number`, `cvv`, `expiration`, `company`)
+VALUES (NULL, '5179255337127769', '566', '2018-08-25', 'Teste company');
