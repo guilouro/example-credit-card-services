@@ -88,6 +88,7 @@
     "webpack-hot-middleware": "^2.12.2"
   },
   "dependencies": {
+    "gsap": "^1.20.3",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.1",

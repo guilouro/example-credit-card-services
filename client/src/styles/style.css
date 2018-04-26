@@ -1,3 +1,54 @@
+*,*::before,*::after{
+    box-sizing:inherit
+}
+html {
+    box-sizing:border-box;
+    -ms-overflow-style:scrollbar;
+    font-size: 10px;
+}
+
 body {
-    background-color: #777;
+    background-color: #ddd;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+}
+
+.card__front, .card__back {
+    position: absolute;
+    background-color: #aaa;
+    border-radius: .8rem;
+    color: #fff;
+    height: 25rem;
+    padding: 2rem;
+    width: 46rem;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+.card__number {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.card__form {
+    width: 52rem;
+}
+
+.form__row {
+    display: flex;
 }
