@@ -36,11 +36,14 @@ class CardSimulator extends React.PureComponent {
                     <div className="card__number">
                         {this.props.number.padEnd(19, '*')}
                     </div>
-                    <div className="card__expiration">
-                        {this.props.expiration}
-                    </div>
-                    <div className="card__company">
-                        {this.props.company}
+                    <div className="card__section">
+                        <div className="card__company">
+                            {this.props.company}
+                        </div>
+                        <div className="card__expiration">
+                            <span>Valid Date</span>
+                            {this.props.expiration}
+                        </div>
                     </div>
                 </div>
                 <div className="card__back" ref={(back) => { this.back = back; }}>
@@ -52,14 +55,6 @@ class CardSimulator extends React.PureComponent {
         );
     }
 }
-
-CardSimulator.defaultProps = {
-    number: '4454 4468 6658 6698',
-    expiration: '',
-    company: '',
-    cvv: '',
-    flip: false,
-};
 
 CardSimulator.propTypes = {
     number: PropTypes.string,
