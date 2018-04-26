@@ -16,6 +16,12 @@ body {
     padding: 0;
 }
 
+input[type="text"] {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
 .content {
     align-items: center;
     display: flex;
@@ -24,25 +30,59 @@ body {
 
 .card {
     position: relative;
+    width: 46rem;
+    height: 25rem;
+    margin: 2rem;
+}
+
+.card__register {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card__front, .card__back {
-    position: absolute;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     background-color: #aaa;
     border-radius: .8rem;
     color: #fff;
     height: 25rem;
-    padding: 2rem;
+    padding: 2.5rem;
+    position: absolute;
     width: 46rem;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
+}
+
+.card__front {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .card__number {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.card__section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__expiration {
+    text-align: center;
+}
+
+.card__expiration span {
+    color: #000;
+    display: inherit;
+    font-size: 1rem;
+    margin-bottom: .2rem;
+    text-align: center;
 }
 
 .card__form {
@@ -51,4 +91,19 @@ body {
 
 .form__row {
     display: flex;
+}
+
+.form__field {
+    flex: 1;
+}
+
+.form__button {
+    align-items: center;
+    background-color: #348BB7;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex: 2;
+    font-weight: bold;
+    justify-content: center;
 }
