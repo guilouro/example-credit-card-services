@@ -126,3 +126,41 @@ input[type="text"] {
     font-weight: bold;
     justify-content: center;
 }
+
+.list {
+    width: 50rem;
+}
+
+list__name {
+    padding: 1rem;
+}
+
+.list__item {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .1rem solid #aaa;
+}
+
+.list__name {
+    padding: 1rem;
+}
+.list__actions {
+    padding: .5rem;
+}
+.list__actions span {
+    padding: .3rem 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+
+.edit {
+    background-color: #348BB7;
+}
+
+.delete {
+    background-color: #f36060;
+}
