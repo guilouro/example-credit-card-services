@@ -22,10 +22,15 @@ input[type="text"] {
     width: 100%;
 }
 
+.button {
+
+}
+
 .content {
     align-items: center;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .card {
@@ -116,14 +121,24 @@ input[type="text"] {
     flex: 1;
 }
 
-.form__button {
-    align-items: center;
+.form__button, .button {
     background-color: #348BB7;
     color: #fff;
     cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button {
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.form__button {
+    align-items: center;
     display: flex;
     flex: 2;
-    font-weight: bold;
     justify-content: center;
 }
 
@@ -156,7 +171,6 @@ list__name {
     display: inline-block;
     cursor: pointer;
 }
-
 
 .edit {
     background-color: #348BB7;

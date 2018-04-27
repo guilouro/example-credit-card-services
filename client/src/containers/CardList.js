@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCards } from 'actions/card-list';
 import { deleteCard } from 'actions/card-register';
+import Loading from 'components/Loading';
 
 class CardList extends React.PureComponent {
     componentDidMount() {
@@ -11,6 +12,10 @@ class CardList extends React.PureComponent {
     }
 
     render() {
+        if (this.props.isLoading) {
+            return <Loading loading />;
+        }
+
         return (
             <div className="list">
                 {this.props.results.map(item =>
@@ -39,6 +44,7 @@ CardList.propTypes = {
     isLoading: PropTypes.bool,
     results: PropTypes.array,
     fetchCards: PropTypes.func,
+    deleteCard: PropTypes.func,
 };
 
 const mapStateToProps = ({ cardList }) => (cardList);
