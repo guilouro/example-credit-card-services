@@ -16,6 +16,7 @@ module.exports = [
         config: {
             validate: {
                 payload: {
+                    id: Joi.string().required(),
                     number: Joi.number().required(),
                     cvv: Joi.number().required(),
                     expiration: Joi.date().required(),
@@ -36,6 +37,7 @@ module.exports = [
         config: {
             validate: {
                 payload: {
+                    id: Joi.string(),
                     number: Joi.number(),
                     cvv: Joi.number(),
                     expiration: Joi.date(),

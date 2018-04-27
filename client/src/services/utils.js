@@ -1,5 +1,6 @@
 import lastDayOfMonth from 'date-fns/last_day_of_month';
 import format from 'date-fns/format';
+import uuid from 'uuid/v1';
 
 export const parseDateToSend = (value) => {
     const [month, year] = value.split('/');
@@ -7,6 +8,7 @@ export const parseDateToSend = (value) => {
 };
 
 export const parseSubmit = values => ({
+    id: values.id || uuid(),
     company: values.company,
     expiration: parseDateToSend(values.expiration),
     number: Number(values.number.replace(/\s/g, '')),

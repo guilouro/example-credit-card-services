@@ -19,7 +19,7 @@ class CardList extends React.PureComponent {
         return (
             <div className="list">
                 {this.props.results.map(item =>
-                    <div className="list__item">
+                    <div key={item.id} className="list__item">
                         <div className="list__name">
                             {item.company}
                         </div>

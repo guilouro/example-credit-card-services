@@ -7,9 +7,6 @@ const Main = props => (
             <div className="header__name">
                 Upnid - Credit Cards
             </div>
-            <div className="header__links">
-                1
-            </div>
         </header>
 
         <section className="content">

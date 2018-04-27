@@ -22,8 +22,15 @@ input[type="text"] {
     width: 100%;
 }
 
-.button {
-
+.header__name {
+    font-size: 2rem;
+    padding: 2rem;
+    color: #fff;
+    background: url(/images/credit-card-bg.jpg);
+    background-size: cover;
+    background-position-y: center;
+    text-align: center;
+    margin-bottom: 5rem;
 }
 
 .content {

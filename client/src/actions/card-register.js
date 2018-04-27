@@ -28,7 +28,13 @@ export const submit = (values, id = false) => (
         const request = fetch(`${API_URL}/cards${id ? `/${id}` : ''}`, {
             method: id ? 'PUT' : 'POST',
             body: JSON.stringify(parseSubmit(values)),
-        }).then(() => dispatch(push('/list')));
+        })
+            .then(res => res.json())
+            .then((res) => {
+                if (!!res.id || res.success) {
+                    dispatch(push('/list'));
+                }
+            });
 
         return dispatch({
             type: SUBMIT,
