@@ -1,5 +1,5 @@
 CREATE TABLE `creditcards` (
-  `id` int(11) NOT NULL,
+  `id` char(36) NOT NULL,
   `number` varchar(256) NOT NULL,
   `cvv` varchar(256) NOT NULL,
   `expiration` date NOT NULL,
@@ -9,10 +9,6 @@ CREATE TABLE `creditcards` (
 ALTER TABLE `creditcards`
   ADD PRIMARY KEY (`id`);
 
-ALTER TABLE `creditcards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
 -- Temp example
 INSERT INTO `creditcards` (`id`, `number`, `cvv`, `expiration`, `company`)
-VALUES (NULL, '5179255337127769', '566', '2018-08-25', 'Teste company');
+VALUES ('7f8b9936-4a28-11e8-842f-0ed5f89f718b', '5179255337127769', '566', '2018-08-25', 'Teste company');
