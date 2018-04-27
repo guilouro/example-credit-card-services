@@ -16,6 +16,7 @@ class Routes extends React.Component {
                 <Switch>
                     <Route exact path="/" component={Register} />
                     <Route path="/list" component={List} />
+                    <Route path="/edit/:id" component={Register} />
                 </Switch>
             </Main>
         );

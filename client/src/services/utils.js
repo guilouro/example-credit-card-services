@@ -13,3 +13,5 @@ export const parseSubmit = values => ({
     cvv: Number(values.cvv),
 });
 
+export const parseExpiration = date => format(date, 'MM/YY');
+

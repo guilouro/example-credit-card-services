@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CardRegister from 'containers/CardRegister';
 
-const Register = () => (
+const Register = props => (
     <React.Fragment>
-        <CardRegister />
+        <CardRegister {...props} />
         <Link to="/list" className="button">
             Go to List
         </Link>

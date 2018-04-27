@@ -1,4 +1,4 @@
-import { FETCH } from 'actions/card-list';
+import { FETCH_ALL } from 'actions/card-list';
 
 const INITIAL_STATE = {
     isLoading: false,
@@ -7,12 +7,12 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case `${FETCH}_PENDING`:
+        case `${FETCH_ALL}_PENDING`:
             return {
                 ...state,
                 isLoading: true,
             };
-        case `${FETCH}_FULFILLED`:
+        case `${FETCH_ALL}_FULFILLED`:
             return {
                 ...state,
                 results: action.payload.results,

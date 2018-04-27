@@ -4,6 +4,7 @@ import { fetchCards } from './card-list';
 
 export const FLIP = 'card-register/FLIP';
 export const CHANGE = 'card-register/CHANGE';
+export const CLEAR = 'card-register/CLEAR';
 export const SUBMIT = 'card-register/SUBMIT';
 export const DELETE = 'card-register/DELETE';
 
@@ -15,6 +16,10 @@ export const toFlip = value => ({
 export const change = (value, field) => ({
     type: CHANGE,
     payload: { value, field },
+});
+
+export const clear = () => ({
+    type: CLEAR,
 });
 
 export const submit = (values) => {

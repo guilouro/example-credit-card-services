@@ -34,7 +34,7 @@ class CardSimulator extends React.PureComponent {
             <div className="card" ref={(card) => { this.card = card; }}>
                 <div className="card__front" ref={(front) => { this.front = front; }}>
                     <div className="card__number">
-                        {this.props.number.padEnd(19, '*')}
+                        {this.props.number.replace(/(\d{4})/g, '$1 ')}
                     </div>
                     <div className="card__section">
                         <div className="card__company">
@@ -48,7 +48,7 @@ class CardSimulator extends React.PureComponent {
                 </div>
                 <div className="card__back" ref={(back) => { this.back = back; }}>
                     <div className="card__cvv">
-                        {this.props.cvv.padEnd(3, '*')}
+                        {this.props.cvv}
                     </div>
                 </div>
             </div>
