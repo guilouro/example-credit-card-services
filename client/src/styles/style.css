@@ -32,7 +32,7 @@ input[type="text"] {
     position: relative;
     width: 46rem;
     height: 25rem;
-    margin: 2rem;
+    margin: 4rem;
 }
 
 .card__register {
@@ -43,17 +43,28 @@ input[type="text"] {
 }
 
 .card__front, .card__back {
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background-color: #aaa;
+    background-image: url(/images/credit-card-bg.jpg);
+    background-size: cover;
     border-radius: .8rem;
     color: #fff;
     height: 25rem;
     padding: 2.5rem;
     position: absolute;
     width: 46rem;
+    box-shadow: 0rem 0.5rem 2rem 0rem #999;
+}
+
+.card__back::before {
+    background-color: #fff;
+    content: ' ';
+    display: block;
+    height: 4rem;
+    left: 0;
+    position: absolute;
+    top: 6rem;
+    width: 100%;
 }
 
 .card__front {
@@ -62,15 +73,23 @@ input[type="text"] {
     justify-content: flex-end;
 }
 
+.card__section {
+    display: flex;
+    justify-content: space-between;
+}
+
 .card__number {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 4rem;
 }
 
-.card__section {
-    display: flex;
-    justify-content: space-between;
+.card__cvv {
+    position: absolute;
+    right: 3rem;
+    top: 7.3rem;
+    color: #333;
+    font-style: italic;
 }
 
 .card__expiration {

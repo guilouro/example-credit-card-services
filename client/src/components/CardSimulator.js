@@ -47,7 +47,7 @@ class CardSimulator extends React.PureComponent {
                     </div>
                 </div>
                 <div className="card__back" ref={(back) => { this.back = back; }}>
-                    <div className="card__company">
+                    <div className="card__cvv">
                         {this.props.cvv.padEnd(3, '*')}
                     </div>
                 </div>
