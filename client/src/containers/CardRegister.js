@@ -23,8 +23,13 @@ class CardRegister extends React.PureComponent {
     }
 
     onSubmit(e) {
-        this.props.submit(this.props.card);
         e.preventDefault();
+
+        if (this.props.match.params.id) {
+            return this.props.submit(this.props.card, this.props.match.params.id);
+        }
+
+        this.props.submit(this.props.card);
     }
 
     render() {

@@ -1,4 +1,5 @@
 import { parseSubmit } from 'services/utils';
+import { push } from 'react-router-redux';
 import { API_URL } from '../constants';
 import { fetchCards } from './card-list';
 
@@ -22,17 +23,19 @@ export const clear = () => ({
     type: CLEAR,
 });
 
-export const submit = (values) => {
-    const request = fetch(`${API_URL}/cards`, {
-        method: 'POST',
-        body: JSON.stringify(parseSubmit(values)),
-    });
+export const submit = (values, id = false) => (
+    (dispatch) => {
+        const request = fetch(`${API_URL}/cards${id ? `/${id}` : ''}`, {
+            method: id ? 'PUT' : 'POST',
+            body: JSON.stringify(parseSubmit(values)),
+        }).then(() => dispatch(push('/list')));
 
-    return {
-        type: SUBMIT,
-        payload: request,
-    };
-};
+        return dispatch({
+            type: SUBMIT,
+            payload: request,
+        });
+    }
+);
 
 export const deleteCard = id => (
     (dispatch) => {
