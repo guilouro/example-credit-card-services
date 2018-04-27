@@ -154,6 +154,7 @@ list__name {
     color: #fff;
     font-size: 1.2rem;
     display: inline-block;
+    cursor: pointer;
 }
 
 

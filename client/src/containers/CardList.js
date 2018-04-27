@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCards } from 'actions/card-list';
+import { deleteCard } from 'actions/card-register';
 
 class CardList extends React.PureComponent {
     componentDidMount() {
@@ -23,7 +24,7 @@ class CardList extends React.PureComponent {
                                     Editar
                                 </span>
                             </Link>
-                            <span className="delete">
+                            <span className="delete" onClick={() => this.props.deleteCard(item.id)}>
                                 Excluir
                             </span>
                         </div>
@@ -42,4 +43,4 @@ CardList.propTypes = {
 
 const mapStateToProps = ({ cardList }) => (cardList);
 
-export default connect(mapStateToProps, { fetchCards })(CardList);
+export default connect(mapStateToProps, { fetchCards, deleteCard })(CardList);
