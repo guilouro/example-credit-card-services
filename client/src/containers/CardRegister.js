@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CardSimulator from 'components/CardSimulator';
-import { toFlip, change } from 'actions/card-register';
+import { toFlip, change, submit } from 'actions/card-register';
 
 const CardRegister = props => (
     <div className="card__register">
@@ -48,12 +48,24 @@ const CardRegister = props => (
                         onBlur={() => props.toFlip(false)}
                     />
                 </div>
-                <div className="form__button">SUBMIT</div>
+                <div
+                    className="form__button"
+                    onClick={() => props.submit(props.card)}
+                >
+                    SAVE
+                </div>
             </div>
         </form>
     </div>
 );
 
+CardRegister.propTypes = {
+    card: PropTypes.object,
+    change: PropTypes.func,
+    toFlip: PropTypes.func,
+    submit: PropTypes.func,
+};
+
 const mapStateToProps = ({ cardRegister }) => ({ card: cardRegister });
 
-export default connect(mapStateToProps, { toFlip, change })(CardRegister);
+export default connect(mapStateToProps, { toFlip, change, submit })(CardRegister);

@@ -27,8 +27,8 @@
     "joi": "^13.2.0",
     "knex": "^0.14.6",
     "mysql": "^2.15.0"
-},
-"devDependencies": {
+  },
+  "devDependencies": {
     "nodemon": "^1.17.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",

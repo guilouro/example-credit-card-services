@@ -1,7 +1,7 @@
 const handlers = require('./handlers');
 const Joi = require('joi');
 
-const apiVersion = '/api/v1';
+const apiVersion = '/v1/api';
 
 module.exports = [
     {

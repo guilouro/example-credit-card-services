@@ -3,7 +3,7 @@ const routerRegister = require('hapi-router');
 
 const server = new Hapi.Server();
 
-server.connection({ port: 8080, host: '0.0.0.0' });
+server.connection({ port: 8080, host: '0.0.0.0', routes: { cors: true } });
 
 server.register({
     register: routerRegister,
