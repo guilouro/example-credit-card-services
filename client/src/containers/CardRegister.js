@@ -7,6 +7,11 @@ import { toFlip, change, clear, submit } from 'actions/card-register';
 import { fetchCard } from 'actions/card-list';
 
 class CardRegister extends React.PureComponent {
+    constructor(props) {
+        super(props);
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+
     componentDidMount() {
         if (this.props.match.params.id) {
             this.props.fetchCard(this.props.match.params.id);
@@ -17,6 +22,11 @@ class CardRegister extends React.PureComponent {
         this.props.clear();
     }
 
+    onSubmit(e) {
+        this.props.submit(this.props.card);
+        e.preventDefault();
+    }
+
     render() {
         return (
             <div className="card__register">
@@ -24,10 +34,11 @@ class CardRegister extends React.PureComponent {
                     {...this.props.card}
                 />
 
-                <form className="card__form">
+                <form className="card__form" onSubmit={this.onSubmit}>
                     <div className="form__row">
                         <div className="form__field">
                             <InputElement
+                                required
                                 type="text"
                                 mask="9999 9999 9999 9999"
                                 maskChar="*"
@@ -38,6 +49,7 @@ class CardRegister extends React.PureComponent {
                         </div>
                         <div className="form__field">
                             <input
+                                required
                                 type="text"
                                 placeholder="FULL NAME"
                                 value={this.props.card.company}
@@ -48,6 +60,7 @@ class CardRegister extends React.PureComponent {
                     <div className="form__row">
                         <div className="form__field">
                             <InputElement
+                                required
                                 type="text"
                                 mask="99/99"
                                 maskChar="*"
@@ -58,6 +71,7 @@ class CardRegister extends React.PureComponent {
                         </div>
                         <div className="form__field">
                             <InputElement
+                                required
                                 type="text"
                                 mask="999"
                                 maskChar="*"
@@ -68,12 +82,11 @@ class CardRegister extends React.PureComponent {
                                 onBlur={() => this.props.toFlip(false)}
                             />
                         </div>
-                        <div
+                        <button
                             className="form__button"
-                            onClick={() => this.props.submit(this.props.card)}
                         >
                             SAVE
-                        </div>
+                        </button>
                     </div>
                 </form>
             </div>
