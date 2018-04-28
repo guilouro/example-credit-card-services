@@ -27,7 +27,7 @@ exports.get = (request, reply) => {
 exports.update = (request, reply) => {
     knex('creditcards').where('id', request.params.id)
         .update(request.payload)
-        .then(res => reply({ success: true, count: res }))
+        .then(res => reply({ success: true, count: res }));
 };
 
 exports.delete = (request, reply) => {

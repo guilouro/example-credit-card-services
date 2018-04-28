@@ -19,7 +19,7 @@ server.register({
 if (require.main === module) {
     server.start((err) => {
         if (err) throw err;
-        console.log(`Server is running in: ${server.info.uri}`);
+        console.log(`Server is running in: ${server.info.uri}`); // eslint-disable-line
     });
 } else {
     module.exports = server;
