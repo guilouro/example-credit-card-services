@@ -1,3 +1,4 @@
+import webpack from 'webpack';
 import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -60,6 +61,9 @@ const config = {
             template: './index.html',
         }),
         new ExtractTextPlugin('css/[name]_[contenthash].css'),
+        new webpack.DefinePlugin({
+            SERVER_PORT: process.env.SERVER_PORT || 8080,
+        }),
     ],
 };
 

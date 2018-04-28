@@ -9,6 +9,16 @@ services:
       - db:mysql
     environment:
       MYSQL_HOST: mysql
+  api_test:
+    build: './server/'
+    ports:
+      - 8888:8080
+    links:
+      - db:mysql_test
+    environment:
+      MYSQL_USER: root
+      MYSQL_HOST: mysql_test
+      MYSQL_DATABASE: upnid_db_test
   db:
     image: mariadb
     ports:
