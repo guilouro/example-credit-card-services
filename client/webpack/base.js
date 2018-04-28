@@ -37,11 +37,6 @@ const config = {
                 }),
             },
             {
-                test: /\.(eot|woff2?|ttf)$/,
-                loader: 'file-loader?limit=1024&name=/fonts/[name].[ext]',
-            },
-
-            {
                 test: /\.(jpg|svg)$/,
                 loader: 'file-loader?name=/images/[name].[ext]',
             },

@@ -1,9 +1,5 @@
 import webpack from 'webpack';
 import baseConfig from './base';
-import Dashboard from 'webpack-dashboard';
-import DashboardPlugin from 'webpack-dashboard/plugin';
-
-const dashboard = new Dashboard();
 
 const config = {
     ... baseConfig,
@@ -19,7 +15,6 @@ const config = {
     plugins: [
         ...baseConfig.plugins,
         new webpack.HotModuleReplacementPlugin(),
-        new DashboardPlugin(dashboard.setData),
     ],
 
     devServer: {

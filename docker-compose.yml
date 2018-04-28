@@ -1,6 +1,18 @@
 version: '3'
 
 services:
+  client:
+    build: './client/'
+    ports:
+      - 8000:80
+
+  client_test:
+    build: './client/'
+    ports:
+      - 9000:80
+    environment:
+      SERVER_PORT: 8888
+
   api:
     build: './server/'
     ports:
@@ -9,6 +21,7 @@ services:
       - db:mysql
     environment:
       MYSQL_HOST: mysql
+
   api_test:
     build: './server/'
     ports:
@@ -19,6 +32,7 @@ services:
       MYSQL_USER: root
       MYSQL_HOST: mysql_test
       MYSQL_DATABASE: upnid_db_test
+      
   db:
     image: mariadb
     ports:

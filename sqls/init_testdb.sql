@@ -15,5 +15,6 @@ ALTER TABLE `creditcards`
   ADD PRIMARY KEY (`id`);
 
 -- Temp example
-INSERT INTO `creditcards` (`id`, `number`, `cvv`, `expiration`, `company`)
-VALUES ('7f8b9936-4a28-11e8-842f-0ed5f89f718b', '5179255337127769', '566', '2018-08-25', 'Teste company');
+INSERT INTO `creditcards` (`id`, `number`, `cvv`, `expiration`, `company`) VALUES
+('d79f0540-4a8c-11e8-a498-738ef08dd9f6', 'U2FsdGVkX19W64/KX2v7KAWpFDdY8cT/yKuJOz7OOGOsBSfvMzCahhf+n+Mbkm6x', 'U2FsdGVkX18tyujJpEsFDf5i0UbatOulSR6O69ybKHg=', '2083-11-29', 'U2FsdGVkX1+kX2q8v9+dgOSDssfYlSeXkVYWflfE4z8=');
+

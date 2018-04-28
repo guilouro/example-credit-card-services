@@ -21,7 +21,6 @@ const config = {
         }),
         new CopyWebpackPlugin([
             { from: './images', to: 'images' },
-            { from: './fonts', to: 'fonts' },
         ])
     ],
 }

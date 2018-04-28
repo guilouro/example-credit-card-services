@@ -2,7 +2,7 @@ import faker from 'faker';
 
 describe('Test on initial page', () => {
     beforeEach(() => {
-        cy.visit('http://0.0.0.0:8000');
+        cy.visit('http://0.0.0.0:9000');
     });
 
     it('Access the page', () => {
@@ -49,7 +49,7 @@ describe('Test on initial page', () => {
 
 describe('Test on list page', () => {
     beforeEach(() => {
-        cy.visit('http://0.0.0.0:8000/list')
+        cy.visit('http://0.0.0.0:9000/list')
     });
 
     it('Access the page', () => {

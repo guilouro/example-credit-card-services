@@ -22,6 +22,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/guilouro/upnid-credit-card#readme",
   "dependencies": {
+    "crypto-js": "^3.1.2",
     "hapi": "^16.6.3",
     "hapi-router": "^3.5.0",
     "joi": "^13.2.0",
