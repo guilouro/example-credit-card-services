@@ -7,7 +7,7 @@ Sistema de gerenciamento de cartão de créditos para teste da empresa upnid
 
 #### Front
 
-- Raact
+- React
 - Redux
 - React Router
 
