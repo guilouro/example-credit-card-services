@@ -5,6 +5,6 @@ clear:
 server: clear
 	docker-compose up --build api db client
 
-server_test: clear
+test: clear
 	docker-compose up -d --build api_test db client
 	cd end2end && npx cypress open
