@@ -7,4 +7,4 @@ server: clear
 
 test: clear
 	docker-compose up -d --build api_test db client
-	cd end2end && npx cypress open
+	cd end2end && if [ ! -d "node_modules" ]; then npm i; fi && npx cypress open
