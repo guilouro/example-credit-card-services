@@ -1,14 +1,12 @@
-FROM nginx:alpine
+FROM mhart/alpine-node:8
 
-WORKDIR /code
-RUN apk add --update nodejs
-# RUN apk add --no-cache curl && curl -o- -L https://yarnpkg.com/install.sh | sh
+WORKDIR /app
+COPY . /app
 
-# ENV PATH /root/.yarn/bin:$PATH
-COPY . /code
-RUN npm i
+RUN npm install -g http-server
+RUN npm i --silent
 RUN npm run build
-RUN mv ./dist/* /usr/share/nginx/html
-RUN ls -la /usr/share/nginx/html
 
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 8080
+
+CMD ["http-server", "dist"]

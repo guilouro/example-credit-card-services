@@ -2,14 +2,14 @@ import faker from 'faker';
 
 describe('Test on initial page', () => {
     beforeEach(() => {
-        cy.visit('http://0.0.0.0:9000');
+        cy.visit('http://0.0.0.0:8000');
     });
 
     it('Access the page', () => {
         cy.contains('Upnid - Credit Cards')
         cy.contains('Go to List')
         cy.get('.button')
-            .should('have.attr', 'href', '/list')
+            .should('have.attr', 'href', '#/list')
     });
 
     it('Create a new credit card', () => {
@@ -34,7 +34,7 @@ describe('Test on initial page', () => {
             .should('have.text', 'SAVE')
             .click()
 
-        cy.url().should('include', '/list')
+        cy.url().should('include', '/#/list')
 
         cy.contains(name)
     });
@@ -43,38 +43,38 @@ describe('Test on initial page', () => {
         cy.get('a.button')
             .click()
 
-        cy.url().should('include', '/list')
+        cy.url().should('include', '/#/list')
     })
 });
 
 describe('Test on list page', () => {
     beforeEach(() => {
-        cy.visit('http://0.0.0.0:9000/list')
+        cy.visit('http://0.0.0.0:8000/#/list')
     });
 
     it('Access the page', () => {
         cy.contains('Upnid - Credit Cards')
         cy.contains('Create new')
         cy.get('.button')
-            .should('have.attr', 'href', '/')
+            .should('have.attr', 'href', '#/')
     });
 
-    it('Delete data', () => {
+    it('Delete card', () => {
         cy.contains('GUILHERME P C LOURO')
             .parent()
             .find('.delete')
             .click()
     });
 
-    it('Update data', () => {
-        const id = "7f8b9936-4a28-11e8-842f-0ed5f89f718b";
-        cy.get(`a[href="/edit/${id}"]`)
+    it('Update card', () => {
+        const id = "d79f0540-4a8c-11e8-a498-738ef08dd9f6";
+        cy.get(`a[href="#/edit/${id}"]`)
             .parent()
             .find('.edit')
             .click()
 
         cy.url()
-            .should('include', `/edit/${id}`)
+            .should('include', `/#/edit/${id}`)
 
         cy.get('input[placeholder="FULL NAME"]')
             .clear()
@@ -83,6 +83,6 @@ describe('Test on list page', () => {
         cy.get('button')
             .click()
 
-        cy.url().should('include', '/list')
+        cy.url().should('include', '/#/list')
     });
 });

@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
-import createHistory from 'history/createBrowserHistory'; // eslint-disable-line import/no-extraneous-dependencies
+import createHistory from 'history/createHashHistory'; // eslint-disable-line import/no-extraneous-dependencies
 import promiseMiddleware from 'redux-promise-middleware';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
