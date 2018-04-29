@@ -40,6 +40,8 @@ $ cd upnid-credit-card
 make server
 ```
 
+Para acessar: [http://0.0.0.0:8000](http://0.0.0.0:8000)
+
 #### Modo teste de integração (usando banco/server próprio para teste)
 
 ```
