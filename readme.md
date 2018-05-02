@@ -1,6 +1,10 @@
 Sistema simples de gerenciamento de cartão de créditos de teste, utilizando HapiJS, React, Redux, Cypress.io e Docker para levantar os serviços separadamente.
 
+---
+
 _**OBS: Sistema criado apenas para estudo e implementação de algumas ferramentas, mas pode ser usado como base por qualquer pessoa**_
+
+---
 
 ![Card example](example.gif)
 
