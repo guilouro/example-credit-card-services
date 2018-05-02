@@ -12,7 +12,7 @@ _**OBS: Sistema criado apenas para estudo e implementação de algumas ferrament
 - Redux
 - React Router
 - GSAP
--
+
 
 #### Back
 
