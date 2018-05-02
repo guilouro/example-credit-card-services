@@ -6,7 +6,7 @@ describe('Test on initial page', () => {
     });
 
     it('Access the page', () => {
-        cy.contains('Upnid - Credit Cards')
+        cy.contains('Credit Cards System')
         cy.contains('Go to List')
         cy.get('.button')
             .should('have.attr', 'href', '#/list')
@@ -53,7 +53,7 @@ describe('Test on list page', () => {
     });
 
     it('Access the page', () => {
-        cy.contains('Upnid - Credit Cards')
+        cy.contains('Credit Cards System')
         cy.contains('Create new')
         cy.get('.button')
             .should('have.attr', 'href', '#/')

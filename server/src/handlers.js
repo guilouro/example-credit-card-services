@@ -5,8 +5,8 @@ const knex = require('knex')({
     connection: {
         host: process.env.MYSQL_HOST || '0.0.0.0',
         user: process.env.MYSQL_USER || 'user',
-        password: process.env.MYSQL_PASSWORD || 'upnid123',
-        database: process.env.MYSQL_DATABASE || 'upnid_db',
+        password: process.env.MYSQL_PASSWORD || 'credit123',
+        database: process.env.MYSQL_DATABASE || 'credit_db',
     },
 });
 

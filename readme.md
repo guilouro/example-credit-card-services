@@ -1,20 +1,24 @@
-Upnid credit card
-========
+Sistema simples de gerenciamento de cartão de créditos de teste, utilizando HapiJS, React, Redux, Cypress.io e Docker para levantar os serviços separadamente.
 
-Sistema de gerenciamento de cartão de créditos para teste da empresa upnid
+_**OBS: Sistema criado apenas para estudo e implementação de algumas ferramentas, mas pode ser usado como base por qualquer pessoa**_
 
-## Stack Utilizada
+![Card example](example.gif)
+
+## Principais stacks utilizadas
 
 #### Front
 
 - React
 - Redux
 - React Router
+- GSAP
+-
 
 #### Back
 
 - Node
 - HapiJS
+- CryptoJS
 - Mysql
 
 ### Infra
@@ -28,11 +32,6 @@ Sistema de gerenciamento de cartão de créditos para teste da empresa upnid
 
 ## Como usar
 
-```
-$ git clone git@bitbucket.org:guilouro/upnid-credit-card.git
-
-$ cd upnid-credit-card
-```
 
 #### Modo produção
 

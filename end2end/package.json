@@ -1,14 +1,14 @@
 {
-  "name": "upnid-end-2-end",
+  "name": "end-2-end-service",
   "version": "1.0.0",
-  "description": "End-2-end test to upnid project",
+  "description": "End-2-end test to project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/guilouro/upnid-credit-card.git"
+    "url": "git+https://github.com/guilouro/example-credit-card-services.git"
   },
   "keywords": [
     "test",
@@ -17,7 +17,7 @@
   ],
   "author": "Guilherme Louro",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/guilouro/upnid-credit-card#readme",
+  "homepage": "https://github.com/guilouro/example-credit-card-services#readme",
   "devDependencies": {
     "cypress": "^2.1.0"
   },

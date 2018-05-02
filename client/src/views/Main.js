@@ -5,7 +5,7 @@ const Main = props => (
     <React.Fragment>
         <header>
             <div className="header__name">
-                Upnid - Credit Cards
+                Credit Cards System
             </div>
         </header>
 

@@ -1,7 +1,7 @@
 {
-  "name": "upnid-credit-card-client",
+  "name": "credit-card-system-client",
   "version": "1.0.0",
-  "description": "Upnid react client",
+  "description": "react client",
   "scripts": {
     "start": "npm run dev",
     "dev": "node -r babel-register ./node_modules/.bin/webpack-dev-server --config ./webpack/dev.js --watch --colors",
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/guilouro/upnid-credit-card.git"
+    "url": "git+https://github.com/guilouro/example-credit-card-services.git"
   },
   "keywords": [
     "react",
@@ -36,7 +36,7 @@
   ],
   "author": "Guilherme Louro",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/guilouro/upnid-credit-card#readme",
+  "homepage": "https://github.com/guilouro/example-credit-card-services#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.4.5",

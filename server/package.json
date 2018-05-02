@@ -1,5 +1,5 @@
 {
-  "name": "upnid-server",
+  "name": "server-credit-card-system",
   "version": "1.0.0",
   "description": "Simple API to create, read update and remove credit cards",
   "main": "./src/app.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/guilouro/upnid-credit-card.git"
+    "url": "git+https://github.com/guilouro/example-credit-card-services.git"
   },
   "keywords": [
     "hapijs",
@@ -20,7 +20,7 @@
   ],
   "author": "Guilherme Louro",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/guilouro/upnid-credit-card#readme",
+  "homepage": "https://github.com/guilouro/example-credit-card-services#readme",
   "dependencies": {
     "crypto-js": "^3.1.2",
     "hapi": "^16.6.3",

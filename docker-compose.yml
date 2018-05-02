@@ -24,7 +24,7 @@ services:
     environment:
       MYSQL_USER: root
       MYSQL_HOST: mysql_test
-      MYSQL_DATABASE: upnid_db_test
+      MYSQL_DATABASE: credit_db_test
 
   db:
     image: mariadb
@@ -33,10 +33,10 @@ services:
     volumes:
       - $PWD/sqls:/docker-entrypoint-initdb.d
     environment:
-      MYSQL_ROOT_PASSWORD: upnid123
+      MYSQL_ROOT_PASSWORD: credit123
       MYSQL_USER: user
-      MYSQL_PASSWORD: upnid123
-      MYSQL_DATABASE: upnid_db
+      MYSQL_PASSWORD: credit123
+      MYSQL_DATABASE: credit_db
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     links:
@@ -45,4 +45,4 @@ services:
       - 8181:80
     environment:
       MYSQL_USERNAME: root
-      MYSQL_ROOT_PASSWORD: upnid123
+      MYSQL_ROOT_PASSWORD: credit123

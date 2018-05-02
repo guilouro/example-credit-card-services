@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS upnid_db_test;
-GRANT ALL ON upnid_db_test.* TO 'user'@'%';
+CREATE DATABASE IF NOT EXISTS credit_db_test;
+GRANT ALL ON credit_db_test.* TO 'user'@'%';
 
-USE upnid_db_test;
+USE credit_db_test;
 
 CREATE TABLE `creditcards` (
   `id` char(36) NOT NULL,
